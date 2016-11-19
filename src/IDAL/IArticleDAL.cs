@@ -1,0 +1,12 @@
+﻿using Model.EntityModel;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace IDAL
+{
+    public interface IArticleDAL : Galaxies.Logic.IDAL.IBaseDAL<Article>
+    {
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://10.202.101.45:8088",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "api/values",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Lamp.WebSocket": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "http://192.168.0.88:8088/home/index1",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "localhost": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "localhost:8088/home/index1"
+    }
+  }
+}

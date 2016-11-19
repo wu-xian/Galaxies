@@ -1,0 +1,41 @@
+<ion-view title="帖子122列表">
+    <!--<div class="bar bar-header bar-royal">
+        <h1 class="title">bar-royal</h1>
+    </div>-->
+    <ion-nav-buttons side="right">
+        <button class="button button-clear ion-plus-round" style="font-size:20px;width:50px;" ng-click="goNew()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <input type="text" ng-model="data.message"></input>
+
+        <button class="button button-bar" ng-click="send()" value="发送">HAHAHA</button>
+
+        <input type="text" ng-model="data.result"></input>
+    </ion-content>
+</ion-view>
+
+<style>
+    .list-container {
+        /*margin-left: 30px;*/
+        background-color: #fff;
+        height: 40px;
+        margin: 5px;
+    }
+    
+    .list {
+        padding: 0;
+        margin: 5;
+        border-top-width: 0;
+        border-bottom-width: 0;
+    }
+    
+    .item {
+        padding: 5;
+    }
+    
+    .overflow-hidden {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+</style>

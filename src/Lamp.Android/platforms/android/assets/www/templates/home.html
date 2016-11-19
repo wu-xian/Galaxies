@@ -1,0 +1,36 @@
+<ion-view title="loginView" side="center">
+    <ion-content class="padding" overflow-scroll="true" style="overflow: hidden">
+        <div class="list list-inset">
+            <label class="item item-input">
+              <input type="text" placeholder="Username" ng-model="data.username" value="admin">
+          </label>
+            <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="data.password" value="admin">
+          </label>
+        </div>
+
+        <ul class="list">
+
+            <li class="item item-toggle">
+                remember
+                <label class="toggle toggle-assertive" ng-model="data.remember">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+            </li>
+
+            <li class="item item-toggle">
+                auto login
+                <label class="toggle toggle-assertive" ng-model="data.auto">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+            </li>
+        </ul>
+        <button class="button button-block button-calm" ng-click="login()">Login</button>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<form id="form">
+    <input id="texter" type="text" autocomplete="off" />
+</form>
+
+<div id="container"></div>
+
+<script>
+    $(function () {
+        //var url = "ws://10.202.101.45:8088/ws";
+        //var url = "ws://192.168.0.88:8088/ws/wuxian";
+        var url = "ws://localhost:5000/ws/wuxian";
+        var socket = new WebSocket(url);
+
+        socket.onopen = function () {
+            alert("opened");
+        }
+
+        socket.close = function () {
+            alert("closed");
+        }
+
+        socket.onmessage = function (event) {
+            $("#form").append(event.data + "<br/>");
+        }
+
+        $("#form")[0].onsubmit = function () {
+            socket.send($("#texter").val());
+            $("#texter").val('');
+            return false;
+        }
+
+    })
+</script>

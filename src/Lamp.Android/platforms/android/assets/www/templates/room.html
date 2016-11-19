@@ -1,0 +1,15 @@
+<ion-view title="message">
+    <ion-content>
+        <ion-list ng-repeat="item in msgList track by $index">
+            <ion-item>
+                {{item}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar>
+        <input class="col-75" type="text" placeholder="Email" ng-model="msgData">
+        <button class="button button-small col-25" ng-click="sendMsg()">
+            Submit
+        </button>
+    </ion-footer-bar>
+</ion-view>

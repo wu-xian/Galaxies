@@ -1,0 +1,54 @@
+<ion-view title="message">
+    <!--<div class="bar bar-header bar-royal">
+        <h1 class="title">bar-royal</h1>
+    </div>-->
+    <ion-nav-buttons side="right">
+        <button class="button button-clear ion-plus-round" style="font-size:20px;width:50px;" ng-click="goNew()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-refresher pulling-text="refresh..." on-refresh="refresh()">
+        </ion-refresher>
+        <ion-list ng-repeat="item in roomList track by $index" type="item-text-wrap" ng-click="gotoRoom('{{item.id}}')">
+            <ion-item>
+                <div class="row overflow-hidden">
+                    {{item.name}}
+                </div>
+                <div class="row">
+                    <div class="col-60 overflow-hidden">{{item.id}}</div>
+                    <div class="col-40 overflow-hidden">{{item.intime}}</div>
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-infinite-scroll on-infinite="loadMore()" ng-if="isShowInfinite" distance="1%">
+        </ion-infinite-scroll>
+        <div id="listBottom" clsas="row" style="background-color:red;text-align:center;" ng-show="listBottomShow">
+            bottom~~~~~~~
+        </div>
+    </ion-content>
+</ion-view>
+
+<style>
+    .list-container {
+        /*margin-left: 30px;*/
+        background-color: #fff;
+        height: 40px;
+        margin: 5px;
+    }
+    
+    .list {
+        padding: 0;
+        margin: 5;
+        border-top-width: 0;
+        border-bottom-width: 0;
+    }
+    
+    .item {
+        padding: 5;
+    }
+    
+    .overflow-hidden {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+</style>

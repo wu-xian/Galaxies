@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form id="former">
+    <input id="texter"  autocomplete="off" />
+</form>
+<div id="container" style="border:1px solid red;"></div>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
+<script>
+    document.onload = function () {
+        webSock();
+    };
+
+    (function (){
+        var url = "ws://192.168.0.88/ws";
+        var socketClient = new WebSocket(url);
+        socketClient.onopen = function () {
+            alert("webSocket opened");
+        }
+        socketClient.onclose = function () {
+            alert("webSocket closed");
+        }
+
+        socketClient.onmessage = function(event) {
+            $("#container").append("<br/> "+event.data);
+        }
+
+        $("#former")[0].onsubmit=function(){
+            socketClient.send($("#texter").val());
+            $("texter").val('');
+            return false;
+        }
+
+    })()
+
+</script>

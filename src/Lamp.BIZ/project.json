@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "DAL.MySql": "1.0.0-*",
+    "IDAL": "1.0.0-*",
+    "Model": "1.0.0-*",
+    "NETStandard.Library": "1.6.0"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  }
+}
