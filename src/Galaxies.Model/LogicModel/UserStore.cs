@@ -10,7 +10,7 @@ namespace Galaxies.Model.LogicModel
     {
         public Guid UserId { set; get; }
         public string UserName { set; get; }
-        public List<Role> Roles { set; get; }
-        public List<ProgramForWeb> ProgramForWeb { set; get; }
+        public Role Role { set; get; }
+        public List<Permission> Permissions { set; get; }
     }
 }

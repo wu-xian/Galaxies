@@ -46,6 +46,8 @@ namespace Galaxies.Core.Services
             services.AddScoped<ProgramRoleClaimBIZ>();
             services.AddScoped<MenuForWebBIZ>();
             services.AddScoped<MenuForWebInRolesBIZ>();
+
+            services.AddMvc();
         }
     }
 

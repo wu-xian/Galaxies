@@ -14,7 +14,6 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Http;
 using Lamp.BIZ;
 using Lamp.WebSocket.WebApplication;
-using Galaxies.Core.Filter;
 using Galaxies.Core.Services;
 using IDAL;
 using DAL.MySql;
@@ -68,10 +67,9 @@ namespace Lamp
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
-            services.AddMvc(options =>
-            {
-                options.Filters.Add(new GlobalActionFilter());
-            });
+
+
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -17,6 +17,8 @@ namespace Galaxies.Model.Context
 
         public virtual DbSet<User> User { set; get; }
         public virtual DbSet<Role> Role { set; get; }
+
+        public virtual DbSet<Permission> Permission { set; get; }
         public virtual DbSet<UserRoleClaim> UserRoleClaim { set; get; }
         public virtual DbSet<ProgramRoleClaim> ProgramRoleClaim { set; get; }
         public virtual DbSet<ProgramForWeb> ProgramForWeb { set; get; }

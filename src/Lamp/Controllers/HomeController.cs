@@ -20,7 +20,7 @@ namespace Lamp.Controllers
         private SecurityService se;
         private ContextService contextService;
         private SecurityService security;
-        public HomeController( SecurityService _se, ContextService con , SecurityService _security)
+        public HomeController(SecurityService _se, ContextService con, SecurityService _security)
         {
             se = _se;
             contextService = con;
@@ -77,6 +77,17 @@ namespace Lamp.Controllers
         public IActionResult Roles()
         {
             return Content("im Roles");
+        }
+
+        public IActionResult Set()
+        {
+            HttpContext.Items.Add("aa", "bbb");
+            return Content((string)HttpContext.Items["aa"]);
+        }
+
+        public IActionResult Get1()
+        {
+            return Json(HttpContext.Items["aa"]);
         }
 
     }

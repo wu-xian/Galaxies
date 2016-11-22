@@ -24,13 +24,12 @@
     "DAL.MySql": "1.0.0-*",
     "Model": "1.0.0-*",
     "SapientGuardian.MySql.Data": "6.9.812",
-    "Dapper": "1.50.2",
     "Microsoft.AspNetCore.Authentication": "1.0.0",
     "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0",
     "Microsoft.AspNetCore.Identity": "1.0.0",
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
     "Microsoft.AspNetCore.Session": "1.0.0",
-    "Pomelo.EntityFrameworkCore.MySql": "1.0.0",
+    "Pomelo.EntityFrameworkCore.MySql": "1.0.1",
     "Microsoft.AspNetCore.WebSockets.Server": "0.1.0",
     "Lamp.BIZ": "1.0.0-*",
     "Galaxies.Model": "1.0.0-*",
@@ -41,13 +40,6 @@
   },
 
   "tools": {
-    "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-preview1-final",
-      "imports": [
-        "portable-net45+win8+dnxcore50",
-        "portable-net45+win8"
-      ]
-    },
     "BundlerMinifier.Core": "2.0.238",
     "Microsoft.AspNetCore.Razor.Tools": "1.0.0-preview2-final",
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final"

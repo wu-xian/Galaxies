@@ -17,8 +17,8 @@ namespace Lamp
                 .UseIISIntegration()
                 //.UseUrls(new string[] {"http://192.168.0.88:88" })
                 //.UseUrls(new string[] { "http://10.202.101.45:88" })
-                .UseUrls(new string[] { "http://0.0.0.0:9001" })
                 .UseStartup<Startup>()
+                //.UseUrls("http://0.0.0.0:9001")
                 .Build();
 
             host.Run();

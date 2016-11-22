@@ -10,7 +10,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace Galaxies.Core.Filter
+namespace Galaxies.Core.Authorization
 {
     public class GlobalActionFilter : TypeFilterAttribute
     {
@@ -27,12 +27,10 @@ namespace Galaxies.Core.Filter
                 contextService = _contextService;
                 sessionService = _session;
             }
-
             public void OnActionExecuted(ActionExecutedContext context)
             {
 
             }
-
             public void OnActionExecuting(ActionExecutingContext context)
             {
                 var controllerDescriptor = context.ActionDescriptor as ControllerActionDescriptor;
@@ -49,14 +47,7 @@ namespace Galaxies.Core.Filter
                         }
                     }
 
-                    string area = context.ActionDescriptor.RouteValues["area"];
-                    string controller = context.ActionDescriptor.RouteValues["controller"];
-                    string action = context.ActionDescriptor.RouteValues["action"];
-                    if (!contextService.HasPermission(area, controller, action))
-                    {
-                        Forbiden(context);
-                        return;
-                    }
+
                 }
             }
 

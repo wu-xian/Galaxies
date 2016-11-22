@@ -7,6 +7,7 @@ namespace Galaxies.Model.EntityModel
         public Guid Id { set; get; }
         public string UserName { set; get; }
         public string Password { set; get; }
+        public int RoleId { set; get; }
         public string RealName { set; get; }
         public string PhoneNo { set; get; }
         public string Email { set; get; }
